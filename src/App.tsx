@@ -1,8 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Header } from "./component/header/header";
 import React from "react";
-import { SideNav } from "./container/sidenav/sidenav";
 import config from './assets/config/config.json';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux'; 
@@ -21,16 +18,11 @@ function App() {
   return (
       <Provider store={store}>
       <header className="app__header">
-        <Header title="MicroFrontend" subTitle="Design Pattern 1" ></Header>
       </header>
       <main>
-        <SideNav></SideNav>
       </main>
       </Provider> 
       );
 }
-
-
-// token d03ceb9f-9336-4bf3-b457-c3313f1645d4
 
 export default App;
