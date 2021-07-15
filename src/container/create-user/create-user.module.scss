@@ -1,0 +1,11 @@
+.create-user-wrapper {
+    display: flex;
+    width: 100%;
+
+     .create-user__header {
+         display: flex;
+         width: 100%;
+         padding: 20px;
+         justify-content: space-between;
+     }
+}

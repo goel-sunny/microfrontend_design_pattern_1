@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { feature1Reducer } from "../../feature1/store/reducers/feature1.reducer";
-import { feature2Reducer } from "../../feature2/store/reducers/feature2.reducer";
+// import { feature1Reducer } from "../../../lib/feature1/store/reducers/feature1.reducer";
+// import { feature2Reducer } from "../../../lib/feature2/store/reducers/feature2.reducer";
 
 export interface IRootState {
   title: string;
@@ -21,6 +21,6 @@ export function appReducer(state = initialState, action: IAction<string>) {
 
 export const reducer = combineReducers({
   app: appReducer,
-  feature1: feature1Reducer,
-  feature2: feature2Reducer,
+  // feature1: feature1Reducer,
+  // feature2: feature2Reducer,
 });

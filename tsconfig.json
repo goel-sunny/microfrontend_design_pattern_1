@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "lib/design-system/feature1"  ]
 }
