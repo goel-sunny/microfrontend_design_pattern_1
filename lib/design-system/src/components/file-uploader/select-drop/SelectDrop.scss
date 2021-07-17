@@ -1,0 +1,18 @@
+@import '../../../../lib/variable';
+
+.selectDrop-wrapper {
+    .selectDrop {
+        display: flex;
+        height: 200px;
+        width: calc(100% - 40px);
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        border: 1px dashed $grey;
+        
+        &__input {
+            font-size: 24px;
+            color: $blue;
+        }
+    }
+}
