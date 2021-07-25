@@ -1,0 +1,9 @@
+@import '../../../../lib/variable';
+
+.dropdownlist-wrapper{
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: $light-grey;
+    z-index: $form-element-index
+}

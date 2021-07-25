@@ -1,0 +1,17 @@
+.dropdowninput-wrapper {
+    position: relative;   
+    width: 100%;
+
+    .dropdowninput{
+        &__input {
+            width: 100%;
+        }
+        &__caret-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+
