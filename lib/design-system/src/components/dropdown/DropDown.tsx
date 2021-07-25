@@ -1,17 +1,19 @@
 import React, { SyntheticEvent } from "react";
 import { DropDownList } from "./dropdown-list/DropDownList";
 import { DropDownLabel } from "./dropdown-label/DropDownLabel";
-import { IDropDownProps } from "./DropDown.props";
+import { IDropDownProps, IValue } from "./DropDown.props";
 import "./DropDown.scss";
 import { DropDownInput } from "./dropdown-input/DropDownInput";
 
 interface IDropDownState {
-
+    selectedValue?: IValue<string | number>;
+    enableList: boolean;
 }
 
 export class DropDown extends React.Component<IDropDownProps , IDropDownState> {
     constructor(props: IDropDownProps){
         super(props);
+        this.state = {enableList: false};
     }
 
     public onChangeEvent(id:string, event: SyntheticEvent){
@@ -26,6 +28,20 @@ export class DropDown extends React.Component<IDropDownProps , IDropDownState> {
          }  
     }
 
+    private renderDropDownList() {
+        if(this.state.enableList) {
+            return  <div className="dropdown__list">
+                        <DropDownList options = {this.props.options} 
+                            onSelectEvent={this.onChangeEvent.bind(this)} />
+                    </div>;
+            }   
+        return;  
+    }
+
+    private triggerInputEvent(){
+        this.setState({...this.state , enableList: !this.state.enableList});
+    }
+
     render(){
         const options = this.props.options.map((option)=>{
             return ( <option value= {option.value} disabled={option.disable ?? false }>{option.name} </option>)
@@ -35,12 +51,9 @@ export class DropDown extends React.Component<IDropDownProps , IDropDownState> {
                 {this.renderDropDownLabel(this.props.label , this.props.required)}      
                 <div className="dropdown-content">
                     <div className="dropdown__input">
-                        <DropDownInput /> 
+                        <DropDownInput  value={this.state.selectedValue}  triggerInputClickEvent= {this.triggerInputEvent.bind(this)} /> 
                     </div>
-                    <div className="dropdown__list">
-                        <DropDownList options = {this.props.options} 
-                                      onSelectEvent={this.onChangeEvent.bind(this)} />
-                    </div>
+                    {this.renderDropDownList()}
                </div>
             </section>
         );
