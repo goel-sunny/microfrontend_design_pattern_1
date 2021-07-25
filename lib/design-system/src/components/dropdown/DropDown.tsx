@@ -16,10 +16,10 @@ export class DropDown extends React.Component<IDropDownProps , IDropDownState> {
         this.state = {enableList: false};
     }
 
-    public onChangeEvent(id:string, event: SyntheticEvent){
-         
+    public onChangeEvent(value: IValue<string | number>, event: SyntheticEvent){
+        console.log('onSelect the value   ', value);      
         if(this.props.onChangeEvent)
-            this.props.onChangeEvent(id, event);
+            this.props.onChangeEvent(value, event);
     }
 
     private renderDropDownLabel(label?: string, required?:boolean){

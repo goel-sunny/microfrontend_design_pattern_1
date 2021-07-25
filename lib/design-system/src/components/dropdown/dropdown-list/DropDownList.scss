@@ -1,9 +1,25 @@
 @import '../../../../lib/variable';
 
-.dropdownlist-wrapper{
+.dropdownlist-wrapper {
     display: block;
     position: absolute;
     width: 100%;
     background-color: $light-grey;
-    z-index: $form-element-index
+    z-index: $form-element-index;
+
+    .dropdownlist {
+        &__item {
+            cursor: pointer;
+            padding: 8px 12px;    
+    
+            &:hover , &:active {
+                background-color: $gold;
+            }
+
+            &[data-disable] {
+                opacity : .5;
+                pointer-events: none;
+            }
+        }
+    }
 }
