@@ -28,7 +28,11 @@ function onChangeEvent(id: string, event:SyntheticEvent){
 
 ReactDOM.render(
   <React.StrictMode>
-    <DropDown label="Select Country : " options = {options} onChangeEvent={onChangeEvent}/>
+    <section className="components">
+      <div className="components__dropdown">
+       <DropDown label="Select Country : " options = {options} onChangeEvent={onChangeEvent}/>
+     </div>
+     </section>
   </React.StrictMode>,
   document.getElementById('root')
 );
