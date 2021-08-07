@@ -6,18 +6,18 @@ import "./DropDown.scss";
 import { DropDownInput } from "./dropdown-input/DropDownInput";
 
 interface IDropDownState {
-    selectedValue?: IValue<string | number>;
+    selectedValues: Array<IValue<string | number>>;
     enableList: boolean;
 }
 
 export class DropDown extends React.Component<IDropDownProps , IDropDownState> {
     constructor(props: IDropDownProps){
         super(props);
-        this.state = {enableList: false};
+        this.state = {selectedValues:[], enableList: false};
     }
 
     public onChangeEvent(value: IValue<string | number>, event: SyntheticEvent){
-        console.log('onSelect the value   ', value);      
+        
         if(this.props.onChangeEvent)
             this.props.onChangeEvent(value, event);
     }
@@ -32,7 +32,8 @@ export class DropDown extends React.Component<IDropDownProps , IDropDownState> {
         if(this.state.enableList) {
             return  <div className="dropdown__list">
                         <DropDownList options = {this.props.options} 
-                            onSelectEvent={this.onChangeEvent.bind(this)} />
+                           values= {this.state.selectedValues} 
+                           onSelectEvent={this.onChangeEvent.bind(this)} />
                     </div>;
             }   
         return;  
@@ -51,7 +52,7 @@ export class DropDown extends React.Component<IDropDownProps , IDropDownState> {
                 {this.renderDropDownLabel(this.props.label , this.props.required)}      
                 <div className="dropdown-content">
                     <div className="dropdown__input">
-                        <DropDownInput  value={this.state.selectedValue}  triggerInputClickEvent= {this.triggerInputEvent.bind(this)} /> 
+                        <DropDownInput  value={this.state.selectedValues}  triggerInputClickEvent= {this.triggerInputEvent.bind(this)} /> 
                     </div>
                     {this.renderDropDownList()}
                </div>

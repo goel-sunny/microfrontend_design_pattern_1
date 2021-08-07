@@ -19,5 +19,6 @@ export interface IDropDownProps {
     options: Array<IOption<string | number>>;
     value?: IValue<string | number>;
     values?: IValue<Array<string | number>>;
+    multiple?: boolean;   //default value of this is false.
     onChangeEvent?: Function;
 }   
