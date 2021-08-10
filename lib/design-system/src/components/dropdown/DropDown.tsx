@@ -52,7 +52,7 @@ export class DropDown extends React.Component<IDropDownProps , IDropDownState> {
                 {this.renderDropDownLabel(this.props.label , this.props.required)}      
                 <div className="dropdown-content">
                     <div className="dropdown__input">
-                        <DropDownInput  value={this.state.selectedValues}  triggerInputClickEvent= {this.triggerInputEvent.bind(this)} /> 
+                        {/* <DropDownInput  value={this.state.selectedValues}  triggerInputClickEvent= {this.triggerInputEvent.bind(this)} />  */}
                     </div>
                     {this.renderDropDownList()}
                </div>
