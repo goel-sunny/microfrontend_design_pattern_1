@@ -1,0 +1,27 @@
+.table-wrapper {
+    
+    --table-column-width: 200px;
+
+    .table-header, .table-body {
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        border-collapse: collapse;
+    }
+    
+    thead tr, tbody tr {
+        width: 100%;
+    }
+    
+    thead tr th {
+        font-weight: bold;
+    }
+
+    th, td {
+        min-width: 70px;
+        width: var(--table-column-width);
+        text-align: center;
+        border: 1px solid grey
+    }
+
+}
