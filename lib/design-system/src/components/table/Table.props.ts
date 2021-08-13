@@ -1,5 +1,4 @@
 import { ReactElement } from "react";
-
 export interface ITableProps {
     rowData: Array<Object>;
     children: Array<ReactElement>;
@@ -7,5 +6,5 @@ export interface ITableProps {
     searching?: boolean;
     filtering?: boolean;
     export?: boolean;
-    multiSeletion?: boolean
+    multiSeletion?: boolean;
 }

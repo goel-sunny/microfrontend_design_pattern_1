@@ -45,6 +45,10 @@ const rowData = [
   }, 
 ]
 
+function Name(props: any){
+  return <div>{props.name}</div>;
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <section className="components">
@@ -53,7 +57,10 @@ ReactDOM.render(
      </div> */}
       <div className="components__table">
         <Table rowData={rowData}>
-            <TableColumn label="Name" field="name" width="200px"></TableColumn>
+            <TableColumn label="Name" field="name" width="200px">
+                <div data-header>Name</div>
+                <Name type={'column-data'}/>
+            </TableColumn>
             <TableColumn label="Sex" field="sex" width="200px"></TableColumn>
             <TableColumn label="Occupation" field="occupation" width="200px"></TableColumn>
         </Table>

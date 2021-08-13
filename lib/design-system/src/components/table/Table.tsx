@@ -8,7 +8,7 @@ export function Table<T>(props: ITableProps){
 
     return(<div className="table-wrapper">
              <div className="table-header">
-                <TableHeader>{props.children}</TableHeader>
+                <TableHeader >{props.children}</TableHeader>
             </div>   
              <div className="table-body">
                  <TableBody rowData={props.rowData}>{props.children}</TableBody>
