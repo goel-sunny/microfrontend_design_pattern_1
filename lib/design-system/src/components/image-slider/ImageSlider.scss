@@ -1,0 +1,27 @@
+.image-slider-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .image-slider {
+        &__prev-action {
+            position: absolute;
+            margin: auto;
+        }
+
+        &__current-img {
+            height: inherit;
+            width: inherit;
+        }
+
+        &__next-action {
+            position: absolute;
+            margin: auto;
+        }
+        
+        &__random {
+            position: absolute;
+            margin: auto;
+        }
+    }
+ }

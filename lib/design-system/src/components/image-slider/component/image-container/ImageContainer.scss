@@ -1,0 +1,12 @@
+.image-container-wrapper {
+    height: inherit;
+    width: inherit;
+
+    .image{
+        alt: 'Fallback Image'; 
+        height: inherit;
+        width: inherit;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;      
+    }
+}
