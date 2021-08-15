@@ -2,6 +2,7 @@ import React, { SyntheticEvent } from 'react';
 import ReactDOM from 'react-dom';
 import { DropDown } from './components/dropdown/DropDown';
 import { IOption } from './components/dropdown/DropDown.props';
+import ImageSlider from './components/image-slider/ImageSlider';
 import { Table } from './components/table/Table';
 import { TableColumn } from './components/table/table-column/TableColumn';
 import './index.scss';
@@ -45,9 +46,32 @@ const rowData = [
   }, 
 ]
 
-function Name(props: any){
-  return <div>{props.name}</div>;
-}
+// function Name(props: any){
+//   return <div>{props.name}</div>;
+// }
+
+const imageSliderData = [
+  {
+    id: 'uuid-1',
+    imgUrl: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+    meta: ''
+  },
+  {
+    id: 'uuid-2',
+    imgUrl: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+    meta: ''
+  },
+  {
+    id: 'uuid-3',
+    imgUrl: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
+    meta: ''
+  },
+  {
+    id: 'uuid-4',
+    imgUrl: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg',
+    meta: ''
+  },
+]
 
 ReactDOM.render(
   <React.StrictMode>
@@ -55,7 +79,7 @@ ReactDOM.render(
       {/* <div className="components__dropdown">
        <DropDown label="Select Country : " options = {options} onChangeEvent={onChangeEvent}/>
      </div> */}
-      <div className="components__table">
+      {/* <div className="components__table">
         <Table rowData={rowData}>
             <TableColumn label="Name" field="name" width="200px">
                 <div data-header>Name</div>
@@ -64,6 +88,9 @@ ReactDOM.render(
             <TableColumn label="Sex" field="sex" width="200px"></TableColumn>
             <TableColumn label="Occupation" field="occupation" width="200px"></TableColumn>
         </Table>
+      </div> */}
+      <div className="components__imageSlider">
+        <ImageSlider data={imageSliderData}/>
       </div>
      </section>
   </React.StrictMode>,

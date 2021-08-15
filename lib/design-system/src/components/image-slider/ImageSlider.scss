@@ -1,0 +1,49 @@
+.image-slider-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .image-slider {
+        &__prev-action {
+            position: absolute;
+            top: 50%;
+            left: 1%;
+            font-size: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background: grey;
+            padding: 5px 10px 11px 10px;
+            cursor: pointer;
+
+            &:hover {
+                font-size: 55px;
+            }
+        }
+
+        &__current-img {
+            height: inherit;
+            width: inherit;
+        }
+
+        &__next-action {
+            position: absolute;
+            top: 50%;
+            right: 1%;
+            font-size: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background: grey;
+            padding: 5px 10px 11px 10px;
+            cursor: pointer;
+
+            &:hover {
+                font-size: 55px;
+            }
+        }
+        
+        &__random {
+            position: absolute;
+            margin: auto;
+        }
+    }
+ }
