@@ -6,7 +6,18 @@
     .image-slider {
         &__prev-action {
             position: absolute;
-            margin: auto;
+            top: 50%;
+            left: 1%;
+            font-size: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background: grey;
+            padding: 5px 10px 11px 10px;
+            cursor: pointer;
+
+            &:hover {
+                font-size: 55px;
+            }
         }
 
         &__current-img {
@@ -16,7 +27,18 @@
 
         &__next-action {
             position: absolute;
-            margin: auto;
+            top: 50%;
+            right: 1%;
+            font-size: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background: grey;
+            padding: 5px 10px 11px 10px;
+            cursor: pointer;
+
+            &:hover {
+                font-size: 55px;
+            }
         }
         
         &__random {
