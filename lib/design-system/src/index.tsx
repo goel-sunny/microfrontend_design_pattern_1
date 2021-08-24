@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import { DropDown } from './components/dropdown/DropDown';
 import { IOption } from './components/dropdown/DropDown.props';
 import ImageSlider from './components/image-slider/ImageSlider';
+import { Pagination } from './components/pagination/Pagination';
 import { Table } from './components/table/Table';
 import { TableColumn } from './components/table/table-column/TableColumn';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
+
+const paginationRef = React.createRef();
 
 const options:Array<IOption<string>> = [{
   name: 'First',
@@ -89,8 +92,11 @@ ReactDOM.render(
             <TableColumn label="Occupation" field="occupation" width="200px"></TableColumn>
         </Table>
       </div> */}
-      <div className="components__imageSlider">
+      {/* <div className="components__imageSlider">
         <ImageSlider data={imageSliderData}/>
+      </div> */}
+      <div className="components__pagination">
+        <Pagination totalCount={89} size={10} ref={paginationRef}/>
       </div>
      </section>
   </React.StrictMode>,

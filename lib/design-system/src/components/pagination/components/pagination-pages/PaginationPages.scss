@@ -1,0 +1,23 @@
+.pagination-pages-wrapper {
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+
+    .pagination-pages {
+        display: inline-flex;
+        width: 100%;
+        border-radius: 10px;
+        background-color: rgb(238, 237, 237);
+        justify-content: center;   
+
+        &__list-item {
+            padding: 5px 20px;
+            cursor: pointer;
+
+            &:hover{
+                font-size: 16px;
+                
+            }
+        }
+    }
+}
