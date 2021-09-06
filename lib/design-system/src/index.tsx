@@ -2,6 +2,8 @@ import React, { SyntheticEvent } from 'react';
 import ReactDOM from 'react-dom';
 import { DropDown } from './components/dropdown/DropDown';
 import { IOption } from './components/dropdown/DropDown.props';
+import { Flex } from './components/flex/Flex';
+import { FlexItem } from './components/flex/flex-item/FlexItem';
 import ImageSlider from './components/image-slider/ImageSlider';
 import { Pagination } from './components/pagination/Pagination';
 import { Table } from './components/table/Table';
@@ -95,8 +97,18 @@ ReactDOM.render(
       {/* <div className="components__imageSlider">
         <ImageSlider data={imageSliderData}/>
       </div> */}
-      <div className="components__pagination">
+      {/* <div className="components__pagination">
         <Pagination totalCount={89} size={10} ref={paginationRef}/>
+      </div> */}
+      <div className="components__flex">
+        <Flex flexDirection={'row'}>
+           <FlexItem>
+             <div>First Column</div>
+           </FlexItem>
+            <FlexItem>
+             <div>Second Column</div>
+           </FlexItem>
+        </Flex>
       </div>
      </section>
   </React.StrictMode>,
